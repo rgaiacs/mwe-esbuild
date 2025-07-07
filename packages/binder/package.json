@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rgaiacs/mwe-esbuild/issues"
   },
-  "homepage": "https://github.com/rgaiacs/mwe-esbuild#readme"
+  "homepage": "https://github.com/rgaiacs/mwe-esbuild#readme",
+  "devDependencies": {
+    "esbuild": "0.25.5"
+  }
 }
