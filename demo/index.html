@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <main id="main"></main>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://cdn.jsdelivr.net/npm/react@19.1.0/+esm",
+          "react-dom/client": "https://cdn.jsdelivr.net/npm/react-dom@19.1.0/client/+esm"
+        }
+      }
+    </script>
+    <script type="module">
+        import { createRoot } from "react-dom/client";
+        import { ErrorPage } from "./binder.js";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById("main");
+            const root = createRoot(container);
+            root.render(ErrorPage("404", "Not found"));
+        });
+    </script>
+  </body>
+</html>
