@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "build": "esbuild --bundle --outfile=dist/binder.js src/index.js"
+    "build": "esbuild --bundle --external:react --outfile=dist/binder.js --format=esm src/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rgaiacs/mwe-esbuild#readme",
   "devDependencies": {
-    "esbuild": "0.25.5"
+    "esbuild": "0.25.5",
+    "react": "^19.1.0"
   }
 }
