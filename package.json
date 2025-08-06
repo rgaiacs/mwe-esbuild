@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "build": "esbuild index.jsx --jsx=automatic --bundle --outfile=demo/binder.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +18,14 @@
   },
   "homepage": "https://github.com/rgaiacs/mwe-esbuild#readme",
   "workspaces": [
-    "packages/binder"
+    "packages/binderhub-client",
+    "packages/binderhub-react-components"
   ],
   "devDependencies": {
+    "esbuild": "^0.25.8",
     "express": "^5.1.0"
+  },
+  "dependencies": {
+    "react-dom": "^19.1.1"
   }
 }

@@ -8,43 +8,13 @@ Decouple the web browser user interface from the server code to make it easier f
 
 Also, to allow third party sides to provide a custom web browser user interface to [binderhub] given limitations with [cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
-## Bundle
-
-This minimal working example uses [esbuild] to pack all the components into a single JavaScript file.
-
-[esbuild] is a newer free and open-source module bundler for JavaScript. It is less extensive than [webpack] but the configuration is a lot smaller.
-
-In this minimal working example, run
+## Usage
 
 ```bash
-npm -w binder run build
-```
-
-to create `binder.js`.
-
-## Usage without re-bundle
-
-A example is provided in [`demo/index.html`](demo/index.html). Run
-
-```bash
+npm install
+npm run build
 npm start
 ```
-
-and open http://localhost:8080/ with your favourite web browser.
-
-This is a fast solution for low traffic pages.
-
-## Usage with re-bundle
-
-This is a solution if you are **already** using [webpack], [vite], [esbuild] or another bundler for JavaScript.
-
-You will be able to run
-
-```bash
-npm install binder
-```
-
-and the components that you use will be included in your final JavaScript.
 
 [binderhub]: https://github.com/jupyterhub/binderhub/
 [esbuild]: https://esbuild.github.io/
